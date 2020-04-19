@@ -1,0 +1,17 @@
+.prod{
+    border: 1px solid black;
+}
+.vm-filter-box{margin-top:3px}
+.vm-slider-box{position:relative;margin:0 auto;top:0;left:0;width:980px;height:830px;overflow:hidden;visibility:hidden}
+.vm-top-modify-search{background-color:#01b4c6;color:#fff;padding-top:5px;padding-bottom:5px;}
+.vm-top-modify-search>div>select, .form-control, .vm-top-modify-search>div>button{height:40px}
+.vm-filter-header{background-color:#01B4C6;color:#fff;font-size:19px;padding:8px 10px;}
+.vm-filter-header>button{position: relative;top:-5px;}
+.vm-filter-subheader{background-color:#e6e6e6;padding:3px 3px;font-size:12px}
+.vm-filter-subheader>span>a{color:#ef1f73;text-decoration:underline;padding-right:10px;cursor:pointer;}
+.vm-filter-subheader>input{color:#333;padding:8px;width:100%;border:0;margin-top:8px}
+.checkbox label{color:#333;font-size:15px}
+.vm-filter-btn>.close{font-size:30px;line-height:22px;color:#dc2a2a;opacity:1}
+#filterrpop>.modal-dialog{margin:auto}
+.checkbox label::before{border-color:#02b6c7}
+.vm-checkbox {width: 30px;height: 30px;margin: 10px !important;border-radius: none;margin-top: 0 !important;}

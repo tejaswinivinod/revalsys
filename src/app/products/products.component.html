@@ -1,0 +1,61 @@
+<div class="main-div">
+  <div class="container-fluid">
+    <div class="row text-center">
+      <div class="col-md-3 ">
+        
+        <div class="vm-filter-box" id="moveMeIntoMain">
+          <div class="vm-filter-header">Filter Your Results <button type="button"
+              class="close pull-right fa-2x visible-xs visible-sm" data-dismiss="modal">&times;</button></div>
+      
+          <div class="panel-group" id="Filter">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title accordion-toggle" data-toggle="collapse" data-parent="#Filter"
+                  href="#Collections">Collections</h4>
+              </div>
+             
+              <div id="Collections" class="panel-collapse">
+                <div class="panel-body">
+                  <div class="checkbox" *ngFor="let collection of collections; let i = index"><input id="collection{{i+1}}" #checkboxes
+                      type="checkbox" value="{{collection.collection}}" (change)="collectionChange($event)"><label
+                      for="collection{{i+1}}">{{collection.collection}}
+                      <span class="pull-right">({{collection.count}})</span></label></div>
+                </div>
+              </div>
+            </div> 
+           
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9 ">
+        <p>properties</p>
+        <ng-container *ngIf="products | collectionFilter : selectedCollection as list">
+         <div *ngFor="let item of list; let itemIndex=index;">
+          <div class="col-md-8 ">
+            <div class="prod" infiniteScroll [infiniteScrollDistance]="0.1" (scrolled)="onScroll()">
+              <h3>Collection : {{item?.Collection }}</h3>
+              <h5>Price:  {{item?.Price}}</h5>
+              <h5>ProductTitle:  {{item?.ProductTitle}}</h5>
+              <h5>StyleName:  {{item?.StyleName}}</h5>
+              <h5>StyleNumber:  {{item?.StyleNumber}}</h5>
+              <h5>NetQuantity:  {{item?.NetQuantity}}</h5>
+              <h5>ProductCode:  {{item?.ProductCode}}</h5>
+              <h5>AvailableSizes:  {{item?.AvailableSizes}}</h5>
+
+              <div>
+
+              </div>
+
+              <span class="vm-boardbass">{{item?.price}}</span>
+
+            </div>
+          </div>
+        </div>
+        </ng-container>
+        <p>Loading...</p>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
